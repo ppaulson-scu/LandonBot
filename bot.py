@@ -1,5 +1,6 @@
 import discord
 import re
+from secret import getSecret
 
 # Bot's Discord ID
 myID = '518690278002130945'
@@ -53,7 +54,8 @@ def get_user_id(message):
 	res = re.sub('!', '', res)
 	print('Found UID ' + res + 'in message.')
 	return res
-	
-if __name__ == "__main__":		
+
+if __name__ == "__main__":
+
 	client = MyClient()
-	client.run('NTE4NjkwMjc4MDAyMTMwOTQ1.XTEAcQ.L6AIHAzuFXUtImRuAYYuYG-u4Bk')
+	client.run(getSecret())
